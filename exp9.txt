@@ -1,0 +1,12 @@
+male(rahul).
+male(rajesh).
+female(rasika).
+parent(rajesh,rahul).
+parent(rasika,rahul).
+sibling(X, Y) :-
+    parent(Z, X),
+    parent(Z, Y),
+    X \= Y.
+son(X,Y):-male(X) ,parent(Y,X).
+mother(X,Y):- parent(X,Y),female(X).
+father(X,Y):- parent(X,Y),male(X).
